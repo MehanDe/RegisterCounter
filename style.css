@@ -52,12 +52,12 @@ main{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:6px 10px 10px}
 .ctx-text{flex:1;text-align:center;font-size:14px;color:var(--mute)}
 .ctx-text b{color:var(--ink)}
 .arrow{width:40px;height:34px;border-radius:10px;background:var(--bg);font-size:24px;line-height:1}
-.keys{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:50px;gap:6px}
-.keys button{border-radius:12px;background:var(--bg);font-size:24px;font-weight:600}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:62px;gap:8px}
+.keys button{border-radius:14px;background:var(--bg);font-size:30px;font-weight:600}
 .keys button:active{background:var(--sel)}
-.keys .fn{font-size:20px;color:var(--mute)}
+.keys .fn{font-size:26px;color:var(--mute)}
 .keys .zero{grid-column:span 2}
-.keys .next{grid-column:4;grid-row:3 / span 2;background:var(--accent);color:#fff;font-size:18px;font-weight:700;line-height:1.3}
+.keys .next{grid-column:4;grid-row:3 / span 2;background:var(--accent);color:#fff;font-size:22px;font-weight:700;line-height:1.3}
 
 /* dialogs */
 dialog{border:0;border-radius:18px;padding:18px;width:min(92vw,380px);background:var(--card);color:var(--ink)}
@@ -69,4 +69,4 @@ dialog .ghost{background:none;text-align:center;color:var(--mute)}
 #drawerList button.on{outline:2px solid var(--accent)}
 .sum{padding:8px 4px;font-size:17px}
 @media (min-width:700px){body{max-width:560px;margin:0 auto}}
-@media (max-height:640px){.big{font-size:34px}.keys{grid-auto-rows:42px}}
+@media (max-height:700px){.big{font-size:34px}.keys{grid-auto-rows:52px}}
