@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#3f7fb3">
+<meta name="description" content="Cash register counting helper for Canadian cash">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Cash Count</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <button id="menuBtn" class="icon" aria-label="Menu">•••</button>
+  <div class="h h-rolls">Rolls</div>
+  <div class="h h-count">Count</div>
+  <button id="clearBtn" class="icon" aria-label="Clear this drawer">⌫ All</button>
+</header>
+
+<main id="rows"></main>
+
+<footer>
+  <button id="drawersBtn" class="icon plus" aria-label="Drawers">＋</button>
+  <button id="drawerName" class="drawer-name"></button>
+  <div class="grand"><div id="total">$0.00</div><div id="diff" class="diff"></div></div>
+</footer>
+
+<section class="keypad" id="keypad">
+  <div>
+    <button data-k="00">00</button><button data-k="0">0</button><button data-k="1">1</button>
+    <button data-k="2">2</button><button data-k="3">3</button><button data-k="4">4</button>
+    <button data-k="back" aria-label="Backspace">⌫</button>
+  </div>
+  <div>
+    <button data-k="prev" aria-label="Previous">←</button><button data-k="5">5</button><button data-k="6">6</button>
+    <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button>
+    <button data-k="next" aria-label="Next">→</button>
+  </div>
+</section>
+
+<dialog id="menuDlg">
+  <h2>Menu</h2>
+  <button data-a="rename">Rename drawer</button>
+  <button data-a="target">Set till float / target</button>
+  <button data-a="delete">Delete drawer</button>
+  <button data-a="clearAll">Clear every drawer</button>
+  <button data-a="close" class="ghost">Close</button>
+</dialog>
+
+<dialog id="drawersDlg">
+  <h2>Drawers</h2>
+  <div id="drawerList"></div>
+  <button id="addDrawer">＋ New drawer</button>
+  <div class="sum">All drawers: <b id="allTotal">$0.00</b></div>
+  <button data-a="close" class="ghost">Close</button>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
