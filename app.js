@@ -81,8 +81,8 @@
       diff.className = 'diff ' + (delta >= 0 ? 'over' : 'short');
       diff.textContent = delta === 0 ? 'Balanced ✓' : (delta > 0 ? 'Over ' : 'Short ') + fmt(Math.abs(delta)) + '  (expected ' + fmt(dr.target) + ')';
     } else {
-      diff.className = 'diff set';
-      diff.textContent = 'Set expected total';
+      diff.className = 'diff';
+      diff.textContent = '';
     }
 
     const d = DENOMS.find(x => x.id === sel.id);
