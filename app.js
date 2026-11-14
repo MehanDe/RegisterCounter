@@ -138,6 +138,10 @@
     render();
   }
   $('diff').addEventListener('click', setTarget);
+  $('clearBtn').addEventListener('click', () => {
+    const dr = cur();
+    if (confirm('Clear all counts in ' + dr.name + '?')) { dr.data = {}; sel = CELLS[0]; fresh = true; render(); }
+  });
 
   // Menu
   $('menuBtn').addEventListener('click', () => $('menuDlg').showModal());
